@@ -1,0 +1,4 @@
+__pycache__/
+/blog/db.sqlite3
+/env/
+/blog/static/

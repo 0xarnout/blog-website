@@ -1,0 +1,132 @@
+#articles {
+    float: left;
+    width: 60%;
+}
+
+#bigarticle {
+    width: 95%;
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+#bigarticle img {
+    height: 300px;
+}
+
+#bigarticle article {
+    height: 120px;
+    margin: -75px 10% 30px 10%;
+    padding: 10px 5%;
+}
+
+#bigarticle article a {
+    max-height: 90px;
+    font-size: 20pt;
+}
+
+#bigarticle p {
+    font-size: 12pt;
+    bottom: 10px;
+}
+
+.article {
+    float: left;
+    width: 45%;
+    margin: 0 2.5% 20px 2.5%;
+    height: 200px;
+}
+
+.article img {
+    height: 150px;
+    width: 100%;
+    float: left;
+}
+
+.article article {
+    height: 60px;
+    width: 70%;
+    margin: -37.5px 10% 15px 10%;
+    padding: 5px 5%;
+    float: left;
+    position: relative;
+    background-color: #282828;
+}
+
+.article article a {
+    display: block;
+    max-height: 50px;
+    overflow: hidden;
+    font-size: 15pt;
+    text-decoration: none;
+}
+
+.article a:hover {
+    opacity: 0.8;
+}
+
+.article p {
+    position: absolute;
+    font-size: 10pt;
+    bottom: 5px;
+    color: grey;
+}
+
+#shortdate {
+    display: none;
+}
+
+#sidebar {
+    float: left;
+    width: 30%;
+    margin: 0 5%;
+}
+
+#sidebar img {
+    width: 100%;
+}
+
+#sidebar p {
+    width: 80%;
+    margin: 30px 10% 0 10%;
+    font-size: 15pt;
+}
+
+@media (orientation:portrait) and (max-width:1080px) {
+    main {
+        width: 90%;
+    }
+    
+    #articles {
+        width: 100%;
+    }
+
+    #bigarticle {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    
+    #bigarticle img {
+        height: 200px;
+    }
+    
+    .article {
+        margin-bottom: 10px;
+        height: 150px;
+    }
+    
+    .article img {
+        height: 100px;
+    }
+
+    .article:not(#bigarticle) #longdate {
+        display: none;
+    }
+
+    .article:not(#bigarticle) #shortdate {
+        display: block;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}

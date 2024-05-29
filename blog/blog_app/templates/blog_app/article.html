@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+{% load cdnstaticfiles %}
+
+{% block title %}{{ article.headline }} | {{ sitesettings.sitename }}{% endblock %}
+{% block blog_focus %}class="focus"{% endblock %}
+{% block description %}{{ article.description_tag }}{% endblock %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% cdnstatic 'blog_app/css/article.css' %}">
+<link rel="stylesheet" type="text/css" href="{% cdnstatic 'blog_app/css/vs2015.min.css' %}">
+{% endblock %}
+
+{% block content %}
+<script src="{% cdnstatic 'blog_app/js/highlight.min.js' %}"></script>
+<script>hljs.highlightAll();</script>
+<h1 id="title">{{ article.headline }}</h1>
+<article>{{ article.article | safe }}</article>
+{% if article.get_related %}
+<hr>
+<h2 class="centerheading">Related articles.</h2>
+<ul id="related">
+    {% for related in article.get_related %}
+    <li>
+        <a href="{% url 'blog_app:article' related.slug %}">
+            <img src="{{ related.get_thumbnail }}" alt="thumbnail">
+        </a>
+        <div class="text">
+            <a href="{% url 'blog_app:article' related.slug %}">{{ related.headline }}</a>
+            <p id="longdate">Published on {{ article.pub_date | date:"d-m-Y" }}.</p>
+            <p id="shortdate">{{ article.pub_date | date:"d-m-Y" }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

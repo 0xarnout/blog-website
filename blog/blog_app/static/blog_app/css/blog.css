@@ -1,0 +1,132 @@
+main {
+    width: 100%;
+}
+
+#yearlist {
+    width: 15%;
+    float: left;
+}
+
+#yearlist h2 {
+    width: 80%;
+    margin: 5px 10%;
+    text-align: center;
+}
+
+#yearlist a {
+    display: block;
+    margin: 5px 25%;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14pt;
+}
+
+#yearlist a:hover {
+    opacity: 0.8;
+}
+
+#yearlist a.focus {
+    color: #7fbfff;
+}
+
+#articles {
+    float: left;
+    width: 80%;
+    margin-right: 5%;
+}
+
+.article {
+    float: left;
+    width: calc(85%/3);
+    margin: 0 2.5% 20px 2.5%;
+    height: 200px;
+}
+
+.article img {
+    height: 150px;
+    width: 100%;
+    float: left;
+}
+
+.article article {
+    height: 60px;
+    width: 70%;
+    margin: -37.5px 10% 15px 10%;
+    padding: 5px 5%;
+    float: left;
+    position: relative;
+    background-color: #282828;
+}
+
+.article article a {
+    display: block;
+    font-size: 15pt;
+    text-decoration: none;
+    height: 45px;
+}
+
+.article a:hover {
+    opacity: 0.8;
+}
+
+.article article a {
+    display: block;
+    max-height: 50px;
+    overflow: hidden;
+}
+
+.article p {
+    position: absolute;
+    font-size: 10pt;
+    bottom: 5px;
+    color: grey;
+}
+
+#shortdate {
+    display: none;
+}
+
+#articles h2 {
+    width: 80%;
+    margin: 50px 0 0 20%;
+}
+
+@media (orientation:portrait) and (max-width:1080px) {
+    #yearlist {
+        width: 80%;
+        margin: 0 10%;
+    }
+    
+    #yearlist h2 {
+        display: none;
+    }
+    
+    #yearlist a {
+        float: left;
+        margin: 0 calc(10%/6) 10px calc(10%/6);
+        width: 30%;
+    }
+
+    #articles {
+        margin: 0 10%;
+    }
+
+    .article {
+        width: 45%;
+        margin-bottom: 10px;
+        height: 150px;
+    }
+    
+    .article img {
+        height: 100px;
+    }
+
+    .article:not(#bigarticle) #longdate {
+        display: none;
+    }
+
+    .article:not(#bigarticle) #shortdate {
+        display: block;
+    }
+}

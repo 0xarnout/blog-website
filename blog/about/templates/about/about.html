@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+{% load cdnstaticfiles %}
+
+{% block title %}about | {{ sitesettings.sitename }}{% endblock %}
+{% block about_focus %}class="focus"{% endblock %}
+{% block description %}{{ sitesettings.about_description_tag }}{% endblock %}
+{% block stylesheet %}<link rel="stylesheet" type="text/css" href="{% cdnstatic 'about/css/about.css' %}">{% endblock %}
+
+{% block content %}
+<article>
+    <img src="{{ sitesettings.about_photo.url }}" alt="about photo">
+    <p>{{ sitesettings.about_text }}</p>
+</article>
+<div id="techs">
+    <h2>I have experience with:</h2>
+    {% for tech in techs %}
+    <img src="{{ tech.image.url }}" alt="{{ tech.name }}" title="{{ tech.name}}">
+    {% endfor %}
+</div>
+<div id="certs">
+    <h2>Certifications:</h2>
+    {% for cert in certs %}
+    <img src="{{ cert.image.url }}" alt="{{ cert.name }}" title="{{ cert.name}}">
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+article {
+    width: 100%;
+    float: left;
+}
+
+article img {
+    width: 35%;
+    float: left;
+}
+
+article p {
+    width: 45%;
+    float: left;
+    margin: 20px 10%;
+    font-size: 16pt;
+}
+
+#techs, #certs {
+    width: 90%;
+    float: left;
+    margin: 20px 5%;
+}
+
+#techs h2, #certs h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 25pt;
+    margin: 20px 0;
+}
+
+#techs img, #certs img {
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    margin: 10px 2.5%;
+}
+
+#certs {
+    margin-bottom: 100px;
+}
+
+@media (orientation:portrait) and (max-width:1080px) {
+    article img {
+        width: 100%;
+    }
+    
+    article p {
+        width: 100%;
+        margin: 20px 0;
+        font-size: 18pt;
+    }
+
+    #techs img, #certs img {
+        width: 45%;
+    }
+
+    #techs, #certs {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
