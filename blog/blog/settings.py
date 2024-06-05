@@ -155,4 +155,6 @@ CKEDITOR_5_CONFIGS = {
     },
 }
 
+DISTILL_SKIP_STATICFILES_DIRS = ['django_ckeditor_5']
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
